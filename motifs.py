@@ -1,3 +1,5 @@
+import re
+
 def split_motifs(labels: str):
   """Split the labels strings into motifs.
 
@@ -28,3 +30,18 @@ def split_motifs(labels: str):
         motif_start_index = i
 
   return motifs
+
+def split_motifs_2(labels: str):
+  """Split the labels strings into motifs.
+
+  A motif is a sequence of consecutive letters in "labels",
+  not including "i" or "0".
+
+  (An implementation with regular expressions)
+
+  Returns:
+    list of pairs, with the motif substring, and the index in labels where
+    it starts.
+  """
+  return [(m.group(), m.start())
+          for m in re.finditer(r'[^i0]+', labels)]

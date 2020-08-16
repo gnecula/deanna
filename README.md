@@ -1,5 +1,11 @@
 # deanna
 
+To get started:
+```
+git checkout https://github.com/gnecula/deanna.git
+cd deanna
+```
+
 To run all the tests:
 ```
 python -m unittest -v *_test.py
