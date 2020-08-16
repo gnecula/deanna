@@ -6,3 +6,4 @@ class TestMotifs(unittest.TestCase):
 
   def test_motif_1(self):
     self.assertEqual(motifs.split_motifs("abi"), [("ab", 0)])
+    self.assertEqual(motifs.split_motifs("aib"), [("a", 0), ("b, 2")])
